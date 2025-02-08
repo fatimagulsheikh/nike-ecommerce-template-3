@@ -3,7 +3,7 @@ import React from 'react';
 interface ButtonProps {
   onClick?: () => Promise<void> | void;
   disabled?: boolean;
-  children: React.ReactNode;
+  children?: React.ReactNode;
   text?: string;
   classNames?: string;
 }
