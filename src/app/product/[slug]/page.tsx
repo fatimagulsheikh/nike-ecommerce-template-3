@@ -165,7 +165,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
               <h3 className="text-xl font-semibold mb-3">Select Size</h3>
               <div className="flex flex-wrap gap-3">
                 {product.sizes.map((size) => (
-                  <Button key={size} variant="outline" className="px-6 py-3 text-lg">
+                  <Button key={size} variant="outline" classNames="px-6 py-3 text-lg">
                     {size}
                   </Button>
                 ))}

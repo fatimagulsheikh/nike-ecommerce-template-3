@@ -5,6 +5,7 @@ interface ButtonProps {
   disabled?: boolean;
   children?: React.ReactNode;
   text?: string;
+  variant?: 'outline' | 'solid';
   classNames?: string;
 }
 
