@@ -25,18 +25,18 @@ export default function Home() {
       </div>
       <section className="px-10">
         <Image src={nikeBanner} alt="" />
-        <div className="flex flex-col items-center py-10">
-          <h3>First Look</h3>
+        <div className="flex flex-col items-center py-10 top-10">
+          {/* <h3>First Look</h3>
           <h2 className="text-5xl uppercase pt-2 text-center">Nike Air Max Pulse</h2>
           <p className="w-full md:w-1/2 text-center py-6">
             Extreme comfort. Hyper durable. Max volume. Introducing the Air Max
             Pulse —designed to push you past your limits and help you go to the
             max.
-          </p>
-          <div className='flex gap-2'>
+          </p> */}
+          {/* <div className='flex gap-2'>
               <Button text="Notify Me" classNames="rounded-full py-2"/>
               <Button text="Shop Air Max" classNames="rounded-full py-2"/>
-          </div>
+          </div> */}
         </div>
       
       </section>
@@ -45,7 +45,7 @@ export default function Home() {
           <ProductSlider/>
           
       </section>
-      <BannerSection heading="Featured" imageUrl={featureBanner} imageAlt="Feature Banner" secondHeading="STEP INTO WHAT FEELS GOOD" para="Cause everyone should know the feeling of running in that perfect pair." buttonText="Find Your Shoe"/>
+      <BannerSection heading="Featured" imageUrl={featureBanner} imageAlt="Feature Banner" secondHeading="STEP INTO WHAT FEELS GOOD" para="Cause everyone should know the feeling of running in that perfect pair." buttonText="Find Your Shoes"/>
       <section className="px-10">
         <h2 className="font-bold">Gear Up</h2>
         <div className="grid grid-cols-12">

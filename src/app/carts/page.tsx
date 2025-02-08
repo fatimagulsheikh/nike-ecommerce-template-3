@@ -26,7 +26,7 @@ const CartPage = () => {
       confirmButtonText: "Yes, remove it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        removeFromCart(id);
+        //removeFromCart(id);
         setCartItems(getCartItems());
         Swal.fire(
           "Removed!",
