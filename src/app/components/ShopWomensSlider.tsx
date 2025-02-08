@@ -158,26 +158,26 @@ const ShopWomensSlider = () => {
     ],
   };
 
-  // Format the price to USD format with validation and price adjustment
-  const formatPrice = (price: any, isDiscounted: boolean) => {
-    // Check if the price is a valid number
-    if (isNaN(price) || price === undefined || price === null) {
-      console.warn(`Invalid price value: ${price}`);
-      return "$199"; // Default value if price is invalid
-    }
+  // Format price with validation and price adjustment
+const formatPrice = (price: any, isDiscounted: boolean): number => {
+  // Check if the price is a valid number
+  if (isNaN(price) || price === undefined || price === null) {
+    console.warn(`Invalid price value: ${price}`);
+    return 199; // Default value if price is invalid
+  }
 
-    let adjustedPrice = price;
+  let adjustedPrice = price;
 
-    // Increase price by 10% for current price (when isDiscounted is false)
-    if (!isDiscounted) {
-      adjustedPrice = adjustedPrice * 1.10; // Increase by 10%
-    } else {
-      // Decrease price by 10% for discounted price
-      adjustedPrice = adjustedPrice * 0.90; // Decrease by 10%
-    }
+  // Increase price by 10% for current price (when isDiscounted is false)
+  if (!isDiscounted) {
+    adjustedPrice = adjustedPrice * 1.1; // Increase by 10%
+  } else {
+    // Decrease price by 10% for discounted price
+    adjustedPrice = adjustedPrice * 0.9; // Decrease by 10%
+  }
 
-    return `$${adjustedPrice.toFixed(2)}`; // Format the price to show two decimals
-  };
+  return parseFloat(adjustedPrice.toFixed(2)); // Return as number
+};
 
   return (
     <>
