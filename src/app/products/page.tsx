@@ -41,20 +41,15 @@ export default function ExploreProducts() {
         {displayedProducts.map((product) => (
           <div key={product._id} className="bg-white border shadow-lg rounded-md overflow-hidden">
 <Link href={`/product/${product.slug.current}`} className="block">
-              <Image
-  src={urlFor(product.image).url()}
-  alt={product.name || "Product image"}
-  width={500}
-  height={500}
-  className="w-full h-64 object-cover"
-/>
+{product.image && (
   <Image
     src={urlFor(product.image).url()}
-    alt={product.name}
+    alt={product.name || "Product image"}
     width={500}
     height={500}
     className="w-full h-64 object-cover"
   />
+)}
   <div className="p-4">
     <h3 className="font-medium text-lg">{product.name}</h3>
     <p className="text-blue-700 font-medium">${product.price}</p>
@@ -62,7 +57,7 @@ export default function ExploreProducts() {
 </Link>
 
             <div className="p-4 flex justify-between">
-              <Button className="bg-black text-white px-4 py-2 rounded" onClick={() => addToCart(product)}>
+              <Button classNames="bg-black text-white px-4 py-2 rounded" onClick={() => addToCart(product)}>
                 Add to Cart
               </Button>
               <Heart className="text-red-500 cursor-pointer" />
@@ -72,7 +67,7 @@ export default function ExploreProducts() {
       </div>
       {showMoreVisible && (
         <div className="flex justify-center mt-8">
-          <Button className="bg-blue-600 text-white px-6 py-2 rounded" onClick={loadMoreProducts}>
+          <Button classNames="bg-blue-600 text-white px-6 py-2 rounded" onClick={loadMoreProducts}>
             Show More Products
           </Button>
         </div>
